@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
-*
 *main - Entry point
+*
+*Description: use printf function to return a string
+*
 *Return: Always 1 (Success)
 */
 int main(void)
