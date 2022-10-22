@@ -11,13 +11,15 @@ int main(void)
 {
 	int n;
 
-	for (n = 0; n < 10; n++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		printf("%d", n);
-		if(x != 9){
-		printf(", ");
+		putchar(n);
+		if (n != '9')
+		{
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
