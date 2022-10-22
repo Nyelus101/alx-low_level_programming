@@ -1,53 +1,37 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
- * main - entry point
- *
- * Description: conditional statements
- *
- * Return: always 0 (success)
+ * main - Entry Point
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Return: 0
  */
 int main(void)
 {
-	int i, j, k, l, m, n;
+	int firstDigit = 0, seconDigit;
 
-	i = j = k = l = 48;
-
-	while (l < 58)
+	while (firstDigit <= 99)
 	{
-		k = 48;
+		seconDigit = firstDigit;
 
-		while (k < 58)
+		while (seconDigit <= 99)
 		{
-			j = 48;
-
-			while (j < 58)
+			if (seconDigit != firstDigit)
 			{
-				i = 48;
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
+				putchar(' ');
+				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
 
-				while (i < 58)
+				if (firstDigit != 98 || seconDigit != 99)
 				{
-					m = (l * 10) + k;
-					n = (j * 10) + i;
-					if (m < n)
-					{
-						putchar(l);
-						putchar(k);
-						putchar(' ');
-						putchar(j);
-						putchar(i);
-
-						if ((l == 57 && k == 56) && (j == 57 && i == 57))
-							break;
-						putchar(',');
-						putchar(' ');
-					}
-					i++;
+					putchar(',');
+					putchar(' ');
 				}
-				j++;
 			}
-			k++;
+			++seconDigit;
 		}
-		l++;
+		++firstDigit;
 	}
 	putchar('\n');
 	return (0);
