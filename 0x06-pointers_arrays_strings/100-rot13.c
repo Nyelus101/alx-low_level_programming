@@ -4,7 +4,6 @@
  * @s: string
  * Return: string `s` rotated
  */
-
 char *rot13(char *s)
 {
 	int i;
