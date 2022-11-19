@@ -5,6 +5,7 @@
  * Numbers must be coma and space separated.
  * Return: 0
  */
+
 int main(void)
 {
 	int count = 2;
