@@ -1,39 +1,31 @@
-#include "main.h"
+#include"main.h"
 
 /**
- * print_triangle - entry point
+ * print_triangle - prints a triangle
  *
- * Description: functions and nested loops
+ * @size: size of the triangle
  *
- * @size: expected parameter in integer
- *
- * Return: void
- */
+ * Return: Always 0 (Success)
+*/
 
 void print_triangle(int size)
 {
-	int m, i, j
+	int hght, base;
 
-	m = 0;
-	i = size - 1;
-	while (m < size)
-	{
-		i = size - 1 - m;
-		j = m + 1;
-		while (i > 0)
-		{
-			_putchar(' ');
-			i--;
-		}
-		while (j > 0)
-		{
-			_putchar('#');
-			j--;
-		}
-		_putchar('\n');
-		m++;
-	}
 	if (size <= 0)
 		_putchar('\n');
+	else
+	{
+		for (hght = 1; hght <= size; ++hght)
+		{
+			for (base = 1; base <= size; ++base)
+			{
+				if ((hght + base) <= size)
+					_putchar(' ');
+				else
+					_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
 }
-
