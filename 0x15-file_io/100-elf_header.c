@@ -309,6 +309,7 @@ void close_file(int elf_file)
  * Return: Always 0 (success)
 */
 
+/**
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *elf;
