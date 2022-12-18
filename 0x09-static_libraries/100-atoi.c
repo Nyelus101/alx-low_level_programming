@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * atoi - function that converts a string
@@ -11,5 +12,5 @@
 
 int _atoi(char *s)
 {
-
+	return (atoi(s));
 }
